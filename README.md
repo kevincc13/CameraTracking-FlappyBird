@@ -5,6 +5,7 @@ Python flappybird game that uses Opencv to track anything you want to play the g
 - Open Trackerflappy.py
 - Select the object you want to track and play the game with.
 - Press Enter to **Start** the tracker & game.
+##### To restart press enter again ####
 # Credits #
 Flappybird game: https://github.com/clear-code-projects/FlappyBird_Python
 
