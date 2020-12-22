@@ -8,4 +8,4 @@ Python flappybird game that uses Opencv to track anything you want to play the g
 # Credits #
 Flappybird game: https://github.com/clear-code-projects/FlappyBird_Python
 
-#### It has some issues but this is my first python project, I'm 14 :) ####
+#### It has some issues with the pipes that i couldn't figure out but i just started with python, I'm 13 :) ####
