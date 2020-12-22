@@ -124,7 +124,7 @@ pipe_surface = pygame.image.load('assets/pipe-green.png')
 pipe_surface = pygame.transform.scale2x(pipe_surface)
 pipe_list = []
 SPAWNPIPE = pygame.USEREVENT
-pygame.time.set_timer(SPAWNPIPE,1200)
+pygame.time.set_timer(SPAWNPIPE,1800)
 pipe_height = [400,600,800]
 
 game_over_surface = pygame.transform.scale2x(pygame.image.load('assets/message.png').convert_alpha())
