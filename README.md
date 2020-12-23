@@ -1,6 +1,8 @@
 # CameraTracking-FlappyBird
 Python flappybird game that uses Opencv to track anything you want to play the game with...
 
+##### install pygame, opencv-python and opencv-contrib-python #####
+
 # How To Run: #
 - Open Trackerflappy.py
 - Select the object you want to track and play the game with.
