@@ -6,6 +6,8 @@ import random
 import threading
 import time
 
+sensitivity = int(2)
+
 (major_ver, minor_ver, subminor_ver) = (cv.__version__).split('.')
 def draw_floor():
     screen.blit(floor_surface,(floor_x_pos,900))
@@ -60,11 +62,11 @@ def score_display(game_state):
         score_rect = score_surface.get_rect(center = (288,100))
         screen.blit(score_surface,score_rect)
     if game_state == 'game_over':
-        score_surface = game_font.render(f'Score: {int(score)}' ,True,(255,255,255))
+        score_surface = game_font.render('Score: {}'.format(int(score)) , True, (255,255,255))
         score_rect = score_surface.get_rect(center = (288,100))
         screen.blit(score_surface,score_rect)
 
-        high_score_surface = game_font.render(f'High score: {int(high_score)}',True,(255,255,255))
+        high_score_surface = game_font.render('High score: {}'.format(int(high_score)),True,(255,255,255))
         high_score_rect = high_score_surface.get_rect(center = (288,850))
         screen.blit(high_score_surface,high_score_rect)
 
@@ -219,8 +221,8 @@ if __name__ == '__main__' :
             x_m_point = float((int(bbox[0]) + int(bbox[0] + bbox[2]))/2)
             y_m_point = float((int(bbox[1]) + int(bbox[1] + bbox[3]))/2)
             cv.circle(combined_window, (int(x_m_point), int(y_m_point)), 5, (0,0,255), 5)
-            x = x_m_point
-            y = y_m_point                   
+            x = x_m_point*sensitivity
+            y = y_m_point*sensitivity
         else :
              #Tracking failure
             cv.putText(combined_window, "Tracking failure detected", (100,80), cv.FONT_HERSHEY_SIMPLEX, 0.75,(0,0,255),2)
